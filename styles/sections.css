@@ -3,7 +3,7 @@ section header{
   padding-block: 12px 24px;
   font: var(--text-span);
 
-  header a{
+  a{
     justify-self: end;
     align-items: center;
     gap: 8px;
@@ -14,22 +14,24 @@ section header{
       height: 16px;
     }
   
-  &:hover span{
-    background-image: url(../assets/icons/ArrowRight-hover.svg);
+    &:hover span{
+      background-image: url(../assets/icons/ArrowRight-hover.svg);
+    }
   }
-}
 }
 
 #featured{
+  grid-area: featured;
+
   img{
     height: 100%;
     object-fit: cover;
   }
 
   .card{
-  border-radius: 4px;
-  overflow: hidden;
-  position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
 
   &::before{
     content: "";
@@ -39,7 +41,7 @@ section header{
     background: linear-gradient(
       180deg,
       transparent 0%,
-      #020617
+      #020617 100%
     );
   }
 
@@ -61,7 +63,8 @@ section header{
 }
 
 #weekly{
-  
+  grid-area: weekly;
+
   &>div{
     grid-template-columns: repeat(4, 292px);
   }
@@ -83,6 +86,38 @@ section header{
   p{
     margin-top: 8px;
     font-weight: 800;
+  }
+}
+
+#ai{
+  grid-area: ai;
+
+  img{
+  width: 176px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  }
+
+  h3{
+    margin-block: 8px 4px;
+  }
+}
+
+aside{
+  grid-area: aside;
+}
+
+#more{
+  margin-top: 32px;
+
+  h3{
+    margin-top: 8px
+  }
+
+  img{
+    width: 72px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
   }
 }
 
